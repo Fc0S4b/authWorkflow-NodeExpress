@@ -30,6 +30,23 @@ const register = async (req, res) => {
     verificationToken,
   });
   const origin = 'http://localhost:3000';
+  // const newOrigin = 'productionlink'
+
+  // const tempOrigin = req.get('origin');
+  // console.log(`origin : ${tempOrigin}`);
+  // origin : http://localhost:5000/
+  // const protocol = req.protocol;
+  // console.log(`protocol : ${protocol}`);
+  // protocol : http
+  // const host = req.get('host');
+  // console.log(`protocol : ${host}`);
+  // protocol : localhost:5000
+  // const forwarderHost = req.get('x-forwarded-host');
+  // const forwarderProtocol = req.get('x-forwarded-proto');
+  // console.log(`forwarder host : ${forwarderHost}`);
+  // forwarder host : localhost:3000
+  // console.log(`forwarder protocol : ${forwarderProtocol}`);
+  // forwarder protocol : http
 
   await sendVerificationEmail({
     name: user.name,
